@@ -49,10 +49,8 @@ func reshape_1(mat [][]float32, f int, c []int) [][]float32{
 				vect[i] = make([]float32, 1)
 			}
 			if len(mat) < 2 {
-				fmt.Println("caso 1")
 				vect[0][i] = vector[0][c[i]]
 			}else{
-				fmt.Println("caso 2")
 				vect[i][0] = vector[0][c[i]]
 			}
 		}
@@ -63,7 +61,6 @@ func reshape_1(mat [][]float32, f int, c []int) [][]float32{
 
 func reshape_2(mat [][]float32, f int, c []int) [][]float32{ 
 		vect = make([][]float32, f + 1)
-		var vector [][]float32
 		vector = make([][]float32, len(mat))
 		for i,  raws := range mat {
 			vector[i] = make([]float32, len(mat))
